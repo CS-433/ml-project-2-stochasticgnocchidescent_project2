@@ -38,4 +38,4 @@ We ran the code on Google Colaboratory and on Ubuntu 20.04.3 LTS. For Ubuntu, se
 - time
 - torchvision 0.2.2
 
-Shold there be any dependency issue, please refer too `misc/dump_packages_versions.txt` for details on the packages in our Ubuntu conda (anaconda3) environment
+Should there be any dependency issue, please refer too `misc/dump_packages_versions.txt` for details on the packages in our Ubuntu conda (anaconda3) environment
