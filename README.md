@@ -13,8 +13,8 @@ The models have been trained on the MNIST dataset using the networks contained i
 - `aggr.py`: Python script to perform aggregation on the logs for graphical representations
 - `aggregate_running_time_data.ipynb`: Notebook used to aggregate the running times data
 - `average_running_time.py`: Python script containing useful functions for aggregating running times
-- `load_data.py`: Python script used to load all the data used in the experiments
-- `neur_nets.py`: Python script containing all the Naural Networks configurations used
+- `load_data.py`: Python script used to load dataset used in the experiments
+- `neur_nets.py`: Python script containing all the Neural Networks configurations used
 - `page.py`: Python script containing the more practical implementation of PAGE optimizer based on epochs
 - `plain_page.py`: Python script containing the more theoretical implementation of PAGE optimizer
 - `plots.ipynb`: Notebook producing all the graphs contained in `report`
