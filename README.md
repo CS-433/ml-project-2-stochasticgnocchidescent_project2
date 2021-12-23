@@ -22,6 +22,9 @@ The models have been trained on the MNIST dataset using the networks contained i
 - `run_plain_page_mlp_random_return.ipynb`: Notebook to train a simple shallow Neural Network using the plain implementation of PAGE returning a random set of weights as stated in the pseudocode of the original paper
 - `running_notebook.ipynb`: principal Notebook on which to run the main comparison between PAGE and SGD
 
+### System
+We ran the code on Ubuntu 20.04.3 LTS and on Google Colaboratory
+
 ### Required Imports
 - csv
 - copy
