@@ -4,12 +4,16 @@
 Francesco Borg, Arturo Cerasi, Davide Mazzali
 
 ### Reproducibility of results
-The models have been trained on the MNIST dataset using the networks contained in `neur_nets.py`, each model can be trained using the notebook `running_notebook.ipynb` and all the graphical representations can be obtained by running `plots.ipynb`. For the comparison between PAGE_64, PAGE_256, SGD_64 and SGD_256 with LeNet, also already trained models' parameters are provided in the folder `trained_models`.
+The models have been trained on the MNIST dataset using the networks contained in `neur_nets.py`, each model can be trained using the notebook `running_notebook.ipynb` and all the graphical representations can be obtained by running `plots.ipynb`. For the comparison between PAGE_64, PAGE_256, SGD_64 and SGD_256 with LeNet. Also already trained models' parameters are provided in the folder `trained_models`, you can load them in `running_notebook.ipynb`
 
 ### Content
 - `report`: The final report with the results
-- `logs_for_performance_plots`: a folder containig all the logs containing number of gradients, running time, training loss and test accuracy, which have been used to obtain the results
 - `logs_for_running_times_tables`: a folder containing all the logs used to create the running time tables contained in `report`
+- `logs_performance_plots`: a folder containig all the logs containing number of gradients, running time, training loss and test accuracy, which have been used to obtain the results
+- `logs_performance_plots_clean`: a folder containig all the logs containing number of gradients, running time, training loss and test accuracy, which have been used to obtain the cleaned plots
+- `misc/dump_packages_versions.txt`: packages versions to run `running_notebook.ipynb`
+- `misc/dump_packages_versions_proxsarah.txt`: packages versions to run the ProxSARAH and PAGE comparison
+- `prox_sarah`: code for ProxSARAH corresponding to the folder `tensorflow_src` in the paper's Github repo.
 - `aggr.py`: Python script to perform aggregation on the logs for graphical representations
 - `aggregate_running_time_data.ipynb`: Notebook used to aggregate the running times data
 - `average_running_time.py`: Python script containing useful functions for aggregating running times
