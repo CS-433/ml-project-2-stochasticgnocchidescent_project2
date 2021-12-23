@@ -4,7 +4,7 @@
 Francesco Borg, Arturo Cerasi, Davide Mazzali
 
 ### Reproducibility of results
-The models have been trained on the MNIST dataset using the networks contained in `neur_nets.py`, each model can be trained using the notebook `running_notebook.ipynb` and all the graphical representations can be obtained by running `plots.ipynb`. For the comparison between PAGE_64, PAGE_256, SGD_64 and SGD_256 with LeNet, also already trained models' parameters are provided in teh folder `trained_models`
+The models have been trained on the MNIST dataset using the networks contained in `neur_nets.py`, each model can be trained using the notebook `running_notebook.ipynb` and all the graphical representations can be obtained by running `plots.ipynb`. For the comparison between PAGE_64, PAGE_256, SGD_64 and SGD_256 with LeNet, also already trained models' parameters are provided in the folder `trained_models`.
 
 ### Content
 - `report`: The final report with the results
