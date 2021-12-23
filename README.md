@@ -42,7 +42,9 @@ Should there be any dependency issue, please refer too `misc/dump_packages_versi
 
 #### Only for ProxSARAH
 To run experiments for ProxSARAH we have slightly modified the author's code to output data in a more convenient formato to us. All credits to
-* N. H. Pham, L. M. Nguyen, D. T. Phan, and Q. Tran-Dinh. **[Proxsarah: An efficient algorithmic framework for stochastic composite non-convex optimization](http://jmlr.org/papers/v21/19-248.html)**. <em>Journal of Machine Learning Research</em>, 21(110):1–48,2020.
+
+N. H. Pham, L. M. Nguyen, D. T. Phan, and Q. Tran-Dinh. **[Proxsarah: An efficient algorithmic framework for stochastic composite non-convex optimization](http://jmlr.org/papers/v21/19-248.html)**. <em>Journal of Machine Learning Research</em>, 21(110):1–48,2020.
+
 The code we used for ProxSARAH can be found in `prox_sarah` and correspondes to their repo's folder `tensorflow_src`.
 The lines with modified in `method_ProxSARAH.py` are labelled as `# modified print by StochasticGnocchiDescent`.
 To run this code, use Python 3.6.3 and TensorFlow 1.12. Other needed packages are keras, sklearn, matplotlib, argParser.
