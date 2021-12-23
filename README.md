@@ -23,9 +23,12 @@ The models have been trained on the MNIST dataset using the networks contained i
 - `running_notebook.ipynb`: principal Notebook on which to run the main comparison between PAGE and SGD
 
 ### System
-We ran the code on Ubuntu 20.04.3 LTS and on Google Colaboratory
+We ran the code on Google Colaboratory and on Ubuntu 20.04.3 LTS. For Ubuntu, see below the packages and versions used.
 
-### Required Imports
+#### Python Version
+- python 3.9.7
+
+#### Required Imports
 - csv
 - copy
 - matplotlib 3.4.2
@@ -35,5 +38,4 @@ We ran the code on Ubuntu 20.04.3 LTS and on Google Colaboratory
 - time
 - torchvision 0.2.2
 
-### Python Version
-- python 3.9.7
+Shold there be any dependency issue, plase refer too `misc/dump_packages_versions.txt' for details on the packages in our Ubuntu conda (anaconda3) environment
