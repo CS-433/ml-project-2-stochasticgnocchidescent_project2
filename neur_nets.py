@@ -56,11 +56,14 @@ def ResNet(cuda, single_channel):
 # reference:
 # https://github.com/epfml/ML_course/blob/master/labs/ex08/solution/ex08.ipynb
 class MLP(nn.Module):
-    def __init__(self, input_size, hidden_size, output_size):
+    def __init__(self, input_size, hidden_size, output_size, cuda):
         super(MLP, self).__init__()
         self.fc1 = nn.Linear(input_size, hidden_size)
         self.activation_fn = nn.ReLU()
         self.fc2 = nn.Linear(hidden_size, output_size)
+
+        if cuda:
+            self.cuda()
     
     def forward(self, x):
         out = self.fc2(self.activation_fn(self.fc1(x)))

@@ -168,10 +168,8 @@ def make_batches_epoch_style(x, y, b, b_prime, p):
 # uses make_batches_epoch_style to randomly partition the training set with random sizes b, b'.
 # print_msgs is for printing nice messages during execution
 # for other parameters see train_epoch_style
-def train_single_init_epoch_style(x, y, test_x, test_y, neur_net, loss_func, b, eta, cuda, log_file_name, save_log, print_log, print_msgs, as_sgd = False):
-    if cuda:
-        x = x.cuda()
-        y = y.cuda()
+
+def train_single_init_epoch_style(x, y, test_x, test_y, neur_net, loss_func, b, eta, log_file_name, save_log, print_log, print_msgs, as_sgd = False):
 
     b_prime = int(np.floor(np.sqrt(b))) # b' is computed according to algo
     p = b_prime/(b_prime + b) if not as_sgd else 1 # p is also computed according to algo, set to 1 if want this run to behave as SGD
@@ -230,18 +228,13 @@ def train_single_init_epoch_style(x, y, test_x, test_y, neur_net, loss_func, b, 
 # trains the given neur_net on the given training set, using practical epoch-based version of PAGE
 # takes train train set x,y, and test set test_x,test_y for computing test accuracy.
 # neur_net is the model to optimize
-# cuda set to True enables cuda on training set
 # b is batch size (should b << n, otherwise use plain PAGE)
 # eta is step size
 # log_file_name is where to store csv log (see below for format of output), set to None if don't want it
 # print log prints to console logged data
 # as_sgd determines if we want to set p=1, i.e. if we want basically SGD
 # num_inits is the number of epochs
-def train_epoch_style(x, y, test_x, test_y, neur_net, loss_func, num_inits, b, eta, cuda, log_file_name, print_log, as_sgd = False):
-    if cuda:
-        x = x.cuda()
-        y = y.cuda()
-
+def train_epoch_style(x, y, test_x, test_y, neur_net, loss_func, num_inits, b, eta, log_file_name, print_log, as_sgd = False):
     save_log = log_file_name != None
 
     log = []
@@ -255,7 +248,7 @@ def train_epoch_style(x, y, test_x, test_y, neur_net, loss_func, num_inits, b, e
     # for num_inits times, call train_single_init_epoch_style
     for init in range(num_inits):
         start_init = time.time()
-        T, partial_log = train_single_init_epoch_style(x, y, test_x, test_y, neur_net, loss_func, b, eta, cuda = False, log_file_name = None, save_log=save_log, print_log = print_log, print_msgs = False, as_sgd = as_sgd)
+        T, partial_log = train_single_init_epoch_style(x, y, test_x, test_y, neur_net, loss_func, b, eta, log_file_name = None, save_log=save_log, print_log = print_log, print_msgs = False, as_sgd = as_sgd)
         
         if save_log:
             # store in the log the info contained in the partial log returned by this epoch

@@ -200,7 +200,7 @@ def train_with_plain_page(x, y, test_x, test_y, neur_net, loss_func, T, b, eta, 
 # this is the same as train_with_plain_page, except we return a random weight from the training history, as per the algo in its plainest version
 # note this works only with neur_nets.MLP network for MNIST dataset
 # comments below show where this differs from train_with_plain_page
-def train_with_plain_page_random_return(x, y, test_x, test_y, neur_net, loss_func, T, b, eta, log_file_name, save_log, print_log, print_msgs, as_sgd = False):
+def train_with_plain_page_random_return(x, y, test_x, test_y, neur_net, loss_func, T, b, eta, cuda, log_file_name, save_log, print_log, print_msgs, as_sgd = False):
     n = len(y)
 
     b_prime = int(np.floor(np.sqrt(b)))
@@ -239,7 +239,7 @@ def train_with_plain_page_random_return(x, y, test_x, test_y, neur_net, loss_fun
 
         if computed_gradients - prev_grads >= n and (save_log or print_log):
             # make a temporary NN
-            temp_nn = neur_nets.MLP(784, 100, 10)
+            temp_nn = neur_nets.MLP(784, 100, 10, cuda)
 
             # set it weights to be randomly selected from the history of weights of PAGE
             i = np.random.randint(len(optimizer.parameters_seq))
